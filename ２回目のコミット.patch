@@ -1,0 +1,15 @@
+Index: app/Http/Controllers/PostController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/Http/Controllers/PostController.php	(revision 436ec5e80736ca4965fded9d8268363e103ab92a)
++++ app/Http/Controllers/PostController.php	(date 1549428696362)
+@@ -16,7 +16,6 @@
+         ];
+         $this->validate($request, $rule);
+ 
+-
+         $data = $request->all();
+         if(empty($data['name'])){
+             $data['name'] = '名無し';

@@ -10,12 +10,12 @@ class PostController extends Controller
 {
     public function store(Request $request)
     {
+        // スレッドIDはハッシュ値にすべきか？
         $rule = [
             'thread_id' => ['required'], // スレッドID
             'content' => ['required', 'string'], // 投稿内容
         ];
         $this->validate($request, $rule);
-
 
         $data = $request->all();
         if(empty($data['name'])){
