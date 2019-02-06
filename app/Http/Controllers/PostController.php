@@ -18,6 +18,7 @@ class PostController extends Controller
         $this->validate($request, $rule);
 
         $data = $request->all();
+        // 名無し固定値が以外も設定できると良いね～。
         if(empty($data['name'])){
             $data['name'] = '名無し';
         }
